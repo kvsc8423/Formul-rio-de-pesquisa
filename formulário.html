@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa de Satisfação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="title">Pesquisa de Satisfação</h1>
+        <p id="description">Por favor, preencha o formulário abaixo para nos ajudar a melhorar!</p>
+    </header>
+
+    <main>
+        <form id="survey-form">
+            <!-- Nome -->
+            <label id="name-label" for="name">Nome:</label>
+            <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                placeholder="Digite seu nome" 
+                required>
+
+            <!-- Email -->
+            <label id="email-label" for="email">E-mail:</label>
+            <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="Digite seu e-mail" 
+                required>
+
+            <!-- Número -->
+            <label id="number-label" for="number">Idade:</label>
+            <input 
+                type="number" 
+                id="number" 
+                name="number" 
+                placeholder="Digite sua idade" 
+                min="18" 
+                max="99" 
+                required>
+
+            <!-- Seleção -->
+            <label for="dropdown">Qual é sua área de interesse?</label>
+            <select id="dropdown" name="dropdown">
+                <option value="tecnologia">Tecnologia</option>
+                <option value="arte">Arte</option>
+                <option value="esportes">Esportes</option>
+            </select>
+
+            <!-- Botões de Opção -->
+            <fieldset>
+                <legend>Como você avalia nosso serviço?</legend>
+                <label>
+                    <input type="radio" name="rating" value="excelente" required> Excelente
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="bom"> Bom
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="ruim"> Ruim
+                </label>
+            </fieldset>
+
+            <!-- Caixas de Seleção -->
+            <fieldset>
+                <legend>Quais melhorias você gostaria de ver?</legend>
+                <label>
+                    <input type="checkbox" name="improvements" value="design"> Design
+                </label>
+                <label>
+                    <input type="checkbox" name="improvements" value="conteudo"> Conteúdo
+                </label>
+                <label>
+                    <input type="checkbox" name="improvements" value="suporte"> Suporte ao cliente
+                </label>
+            </fieldset>
+
+            <!-- Comentários -->
+            <label for="comments">Comentários adicionais:</label>
+            <textarea id="comments" name="comments" placeholder="Digite aqui..." rows="4"></textarea>
+
+            <!-- Botão de Envio -->
+            <button id="submit" type="submit">Enviar</button>
+        </form>
+    </main>
+</body>
+</html>
